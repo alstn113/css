@@ -32,7 +32,7 @@
         <div class="form signupForm">
           <form>
             <h3>Sign Up</h3>
-            <input type="text" placeholder="Username" />
+            <input id="ss" type="text" placeholder="Username" />
             <input type="text" placeholder="Email Address" />
             <input type="password" placeholder="Password" />
             <input type="password" placeholder="Confirm Password" />
@@ -46,6 +46,7 @@
       const signupBtn = document.querySelector(".signupBtn");
       const formBx = document.querySelector(".formBx");
       const body = document.querySelector("body");
+      const test = document.querySelector(".signupForm");
 
       signupBtn.onclick = function () {
         formBx.classList.add("active");

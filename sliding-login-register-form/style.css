@@ -76,7 +76,7 @@ body.active {
   justify-content: center;
   align-items: center;
   box-shadow: 0 5px 45px rgba(0, 0, 0, 0.25);
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
   overflow: hidden;
 }
 
@@ -89,19 +89,23 @@ body.active {
   left: 0;
   width: 100%;
   padding: 50px;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
+  visibility: visible;
 }
 
 .formBx.active .signinForm {
   left: -100%;
+  visibility: hidden;
 }
 
 .formBx .signupForm {
   left: 100%;
+  visibility: hidden;
 }
 
 .formBx.active .signupForm {
   left: 0;
+  visibility: visible;
 }
 
 .formBx .form form {
