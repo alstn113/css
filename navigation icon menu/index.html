@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>navigation icon menu</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  </head>
+  <body>
+    <div class="navigation">
+      <ul>
+        <li class="list active">
+          <a href="#">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span class="text">Home</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon"><i class="fas fa-user"></i></span>
+            <span class="text">Profile</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon"><i class="fas fa-comment"></i></span>
+            <span class="text">Message</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon"><i class="fas fa-camera"></i></span>
+            <span class="text">Photos</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon"><i class="fas fa-cog"></i></span>
+            <span class="text">Settings</span>
+          </a>
+        </li>
+        <div class="indicator"></div>
+      </ul>
+    </div>
+    <script>
+      const list = document.querySelectorAll(".list");
+      function activeLink() {
+        list.forEach((item) => item.classList.remove("active"));
+        this.classList.add("active");
+      }
+      list.forEach((item) => item.addEventListener("click", activeLink));
+    </script>
+  </body>
+</html>
