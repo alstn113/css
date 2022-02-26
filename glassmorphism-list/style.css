@@ -47,7 +47,7 @@ section::after {
   border-radius: 10px;
   z-index: 10;
   padding: 20px;
-  backdrop-filter: blur(25px);
+  backdrop-filter: blur(15px);
 }
 
 .box h3 {
