@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navigation">
+      <div class="menuToggle"></div>
+      <ul>
+        <li class="list active" style="--clr: #f03e3e">
+          <a href="#">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span class="text">Home</span>
+          </a>
+        </li>
+        <li class="list" style="--clr: #e599f7">
+          <a href="#">
+            <span class="icon"><i class="fas fa-address-card"></i></span>
+            <span class="text">About</span>
+          </a>
+        </li>
+        <li class="list" style="--clr: #b197fc">
+          <a href="#">
+            <span class="icon"><i class="fas fa-comment"></i></span>
+            <span class="text">Message</span>
+          </a>
+        </li>
+        <li class="list" style="--clr: #74c0fc">
+          <a href="#">
+            <span class="icon"><i class="fas fa-camera"></i></span>
+            <span class="text">Photos</span>
+          </a>
+        </li>
+        <li class="list" style="--clr: #63e6be">
+          <a href="#">
+            <span class="icon"><i class="fas fa-hammer"></i></span>
+            <span class="text">Settings</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <script>
+      const menuToggle = document.querySelector(".menuToggle");
+      const navigation = document.querySelector(".navigation");
+      menuToggle.onclick = function () {
+        navigation.classList.toggle("open");
+      };
+      const list = document.querySelectorAll(".list");
+      function activeLink() {
+        list.forEach((item) => {
+          item.classList.remove("active");
+        });
+        this.classList.add("active");
+      }
+      list.forEach((item) => item.addEventListener("click", activeLink));
+    </script>
+  </body>
+</html>
