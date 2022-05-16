@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="content">
+      <h1>Modal Animations</h1>
+      <div class="buttons">
+        <a href="#none" id="one" class="button">Unfolding</a>
+        <a href="#none" id="two" class="button">Revealing</a>
+        <a href="#none" id="three" class="button">Uncovering</a>
+        <a href="#none" id="four" class="button">Blow Up</a>
+        <br />
+        <a href="#none" id="five" class="button">Meep Meep</a>
+        <a href="#none" id="six" class="button">Bond</a>
+      </div>
+    </div>
+
+    <div id="modal-container">
+      <div class="modal-background">
+        <div class="modal">
+          <h2>I'm a Modal</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, similique!</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const $button = document.querySelectorAll(".button");
+      const $modalContainer = document.querySelector("#modal-container");
+      const $body = document.querySelector("body");
+      const $content = document.querySelector(".content");
+      let $btnId;
+
+      $button.forEach((button) =>
+        button.addEventListener("click", function () {
+          $btnId = this.id;
+          console.log($btnId);
+
+          $modalContainer.removeAttribute("class");
+          $modalContainer.classList.add($btnId);
+          $content.removeAttribute("class");
+          $content.classList.add("content");
+
+          $body.classList.add("modal-active");
+
+          if ($btnId == "two" || $btnId == "three" || $btnId == "four") {
+            $content.classList.add($btnId);
+          }
+        })
+      );
+
+      $modalContainer.addEventListener("click", function () {
+        this.classList.add("out");
+        $body.classList.remove("modal-active");
+        if (this.classList.contains($btnId)) {
+          $content.classList.add("out");
+        }
+      });
+    </script>
+  </body>
+</html>
