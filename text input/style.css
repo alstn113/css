@@ -106,7 +106,7 @@ h1 {
   z-index: 10;
 }
 
-.form__input:not(:placeholder-shown).form__input:not(:focus) + .form__label {
+.form__input:not(:placeholder-shown):not(:focus) + .form__label {
   top: -0.5rem;
   left: 0.8rem;
   font-size: var(--small-font-size);
