@@ -153,6 +153,7 @@ body {
 
 .card:hover .imgBx img {
   opacity: 1;
+  width: 150px;
 }
 
 .card .content {
